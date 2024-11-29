@@ -1,0 +1,318 @@
+/* Estilos Generales */
+body {
+  background-color: #fff0f5; /* Establece un color de fondo suave (rosado claro). */
+  color: #333; /* Color de texto oscuro para mejor legibilidad. */
+  font-family: 'Poppins', sans-serif; /* Usamos la fuente 'Poppins' para todo el cuerpo. */
+  line-height: 1.8; /* Espaciado entre líneas para que el texto sea más legible. */
+  margin: 0; /* Elimina los márgenes predeterminados del navegador. */
+  min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana. */
+  display: flex; /* Usamos Flexbox para la distribución del contenido. */
+  flex-direction: column; /* Los elementos dentro del body estarán en una columna. */
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Fondo con un gradiente rosado claro. */
+  color: #fff; /* Texto blanco para que contraste con el fondo. */
+  padding: 3rem 0; /* Espaciado superior e inferior de 3rem. */
+  text-align: center; /* El texto en el encabezado estará centrado. */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Da una forma diagonal al fondo, recortando las esquinas. */
+}
+
+.header-content {
+  max-width: 1200px; /* Limita el ancho máximo del contenido a 1200px. */
+  margin: 0 auto; /* Centra el contenido horizontalmente. */
+  padding: 0 2rem; /* Espaciado horizontal de 2rem. */
+}
+
+h1 {
+  font-family: 'Playfair Display', serif; /* Usa la fuente serif 'Playfair Display' para el título. */
+  font-size: 4rem; /* Título grande de 4rem. */
+  margin: 0; /* Elimina el margen por defecto. */
+  letter-spacing: 2px; /* Aumenta el espacio entre letras para darle estilo. */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para el texto, para destacarlo. */
+}
+
+.header-subtitle {
+  font-family: 'Poppins', sans-serif; /* Usa la fuente sans-serif 'Poppins' para el subtítulo. */
+  font-weight: 300; /* Establece un peso de fuente ligero. */
+  font-size: 1.8rem; /* Tamaño de fuente más pequeño para el subtítulo. */
+  margin-top: 1rem; /* Un pequeño margen en la parte superior. */
+  opacity: 0.9; /* Ligera opacidad para que no compita demasiado con el título. */
+}
+
+/* Contenido Principal */
+main {
+  flex: 1; /* Permite que el contenido principal ocupe el espacio restante disponible. */
+  padding: 3rem; /* Espaciado alrededor del contenido. */
+  max-width: 1200px; /* Limita el ancho máximo del contenido principal. */
+  margin: 0 auto; /* Centra el contenido en la página. */
+  width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible. */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento. */
+}
+
+.contenedor {
+  display: none; /* Inicialmente el contenedor está oculto. */
+  opacity: 0; /* Y no es visible. */
+  transition: all 0.5s ease; /* Se aplicará una transición suave cuando cambie el estado. */
+}
+
+.contenedor.visible {
+  display: block; /* Cuando tiene la clase 'visible', el contenedor se muestra. */
+  opacity: 1; /* Lo hace completamente visible. */
+}
+
+/* Menú Principal */
+.menu-grid {
+  display: grid; /* Usamos Grid Layout para organizar los botones en un formato de rejilla. */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Las columnas se ajustan automáticamente, con un mínimo de 280px de ancho. */
+  gap: 2rem; /* Espacio de 2rem entre las celdas de la cuadrícula. */
+  padding: 1rem; /* Espaciado alrededor de la cuadrícula. */
+}
+
+.menu-button {
+  background: linear-gradient(135deg, #fff5f5, #fff0f5); /* Fondo de gradiente muy suave de colores rosados. */
+  border: none; /* Sin bordes para un diseño limpio. */
+  border-radius: 15px; /* Bordes redondeados para un estilo más suave. */
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.1); /* Sombra ligera para dar profundidad. */
+  cursor: pointer; /* Cambia el cursor a un puntero cuando pasas por encima. */
+  display: flex; /* Utiliza Flexbox para organizar el contenido dentro del botón. */
+  flex-direction: column; /* El contenido dentro del botón estará en una columna. */
+  padding: 2.5rem; /* Espaciado interno de 2.5rem. */
+  transition: all 0.3s ease; /* Transición suave cuando se interactúa con el botón. */
+}
+
+.menu-button:hover {
+  transform: translateY(-5px); /* Efecto de desplazamiento hacia arriba cuando el mouse pasa sobre el botón. */
+  box-shadow: 0 12px 24px rgba(255, 105, 180, 0.2); /* Sombra más intensa al pasar el mouse. */
+}
+
+.button-title {
+  color: #ff69b4; /* Título del botón con color rosa fuerte. */
+  font-family: 'Playfair Display', serif; /* Fuente serif para un estilo elegante. */
+  font-size: 1.8rem; /* Tamaño grande de fuente para el título. */
+  margin-bottom: 0.75rem; /* Margen debajo del título. */
+}
+
+.button-subtitle {
+  color: #333; /* Texto en color oscuro para el subtítulo. */
+  font-size: 1.2rem; /* Tamaño de fuente más pequeño para el subtítulo. */
+}
+
+/* Secciones de Contenido */
+.section-content {
+  background: linear-gradient(135deg, #fff, #fff0f5); /* Fondo suave con un gradiente de blanco a rosado claro. */
+  border-radius: 20px; /* Bordes redondeados para un estilo más amigable. */
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.1); /* Sombra ligera para dar profundidad. */
+  padding: 3rem; /* Espaciado interno de 3rem. */
+  margin: 2rem auto; /* Márgenes superior e inferior de 2rem, centrado horizontalmente. */
+  max-width: 900px; /* El contenido de la sección tiene un ancho máximo de 900px. */
+}
+
+h2 {
+  color: #ff69b4; /* Título de la sección con un color rosado fuerte. */
+  font-family: 'Playfair Display', serif; /* Fuente serif para el título. */
+  font-size: 3rem; /* Título grande de 3rem. */
+  margin-bottom: 2.5rem; /* Un buen margen inferior para separar el título del contenido. */
+  text-align: center; /* Centra el título en la sección. */
+  text-shadow: 1px 1px 2px rgba(255, 105, 180, 0.2); /* Sombra sutil para dar énfasis. */
+}
+
+/* Listas Elegantes */
+.elegant-list,
+.ingredients-list {
+  list-style: none; /* Elimina los puntos de las listas. */
+  padding: 0; /* Elimina el padding por defecto de las listas. */
+  margin: 0; /* Elimina el margen por defecto. */
+}
+
+.elegant-list li,
+.ingredients-list li {
+  border-bottom: 1px solid rgba(255, 105, 180, 0.2); /* Líneas sutiles entre los elementos de la lista. */
+  margin-bottom: 2rem; /* Espaciado debajo de cada elemento de la lista. */
+  padding-bottom: 2rem; /* Espaciado interno en la parte inferior. */
+}
+
+.elegant-list li:last-child,
+.ingredients-list li:last-child {
+  border-bottom: none; /* Elimina la línea de separación en el último elemento de la lista. */
+}
+
+.elegant-list h3,
+.ingredients-list h3 {
+  color: #ff69b4; /* Títulos de las listas con un color rosado fuerte. */
+  font-family: 'Playfair Display', serif; /* Fuente serif para los subtítulos. */
+  font-size: 1.8rem; /* Tamaño de fuente de 1.8rem para los subtítulos. */
+  margin-bottom: 0.75rem; /* Margen debajo de los subtítulos. */
+}
+
+/* Tabla Elegante */
+.table-container {
+  overflow-x: auto; /* Permite que la tabla se desplace horizontalmente si es más ancha que el contenedor. */
+  margin: 2.5rem 0; /* Márgenes superior e inferior de 2.5rem. */
+}
+
+.elegant-table {
+  border-collapse: separate; /* Las celdas no estarán pegadas entre sí. */
+  border-spacing: 0; /* Elimina el espacio entre las celdas. */
+  width: 100%; /* Hace que la tabla ocupe todo el ancho disponible. */
+  background: white; /* Fondo blanco para la tabla. */
+  margin: 1rem 0; /* Márgenes superior e inferior de 1rem. */
+  border-radius: 15px; /* Bordes redondeados para la tabla. */
+  overflow: hidden; /* Evita que el contenido se desborde fuera de la tabla. */
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1); /* Sombra ligera para dar profundidad. */
+}
+
+.elegant-table th {
+  background-color: #ff69b4; /* Fondo rosa fuerte para los encabezados de la tabla. */
+  color: #fff; /* Texto blanco para los encabezados. */
+  font-family: 'Playfair Display', serif; /* Fuente serif para los encabezados. */
+  font-weight: normal; /* Sin negrita en los encabezados. */
+  padding: 1.25rem; /* Espaciado interno de 1.25rem en los encabezados. */
+  text-align: left; /* Alineación del texto a la izquierda. */
+}
+
+.elegant-table td {
+  border-bottom: 1px solid rgba(255, 105, 180, 0.1); /* Líneas de separación sutiles entre las filas. */
+  color: #333; /* Texto oscuro en las celdas de la tabla. */
+  padding: 1.25rem; /* Espaciado interno de 1.25rem en las celdas. */
+}
+
+.elegant-table tr:last-child td {
+  border-bottom: none; /* Elimina la línea de separación en la última fila. */
+}
+
+.elegant-table tr:hover td {
+  background-color: rgba(255, 105, 180, 0.05); /* Cambia el fondo cuando se pasa el mouse sobre una fila. */
+}
+
+/* Formulario Elegante */
+.elegant-form {
+  display: flex; /* Usamos Flexbox para organizar los elementos del formulario. */
+  flex-direction: column; /* Los elementos estarán en una columna. */
+  gap: 1.5rem; /* Espacio entre los elementos del formulario. */
+  max-width: 600px; /* El formulario tiene un ancho máximo de 600px. */
+  margin: 0 auto; /* Centra el formulario en la página. */
+}
+
+.form-group {
+  display: flex; /* Los elementos dentro de un grupo de formulario estarán en fila. */
+  flex-direction: column; /* Los elementos dentro de cada grupo estarán en una columna. */
+  gap: 0.75rem; /* Espaciado entre los elementos del grupo. */
+}
+
+.form-group label {
+  color: #ff69b4; /* Color rosado para las etiquetas. */
+  font-size: 1.2rem; /* Tamaño de fuente más grande para las etiquetas. */
+  font-weight: 500; /* Peso de fuente medio para las etiquetas. */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: #fff; /* Fondo blanco para los campos de entrada. */
+  border: 1px solid rgba(255, 105, 180, 0.3); /* Borde rosado sutil para los campos. */
+  border-radius: 10px; /* Bordes redondeados para los campos. */
+  color: #333; /* Texto oscuro dentro de los campos. */
+  font-family: 'Poppins', sans-serif; /* Fuente sans-serif para los campos. */
+  font-size: 1.1rem; /* Tamaño de fuente de 1.1rem para los campos. */
+  padding: 1rem; /* Espaciado interno de 1rem en los campos. */
+  transition: all 0.3s ease; /* Transición suave para cambios en los campos. */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff69b4; /* Cambia el borde a rosa cuando un campo está enfocado. */
+  outline: none; /* Elimina el borde predeterminado de enfoque. */
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1); /* Agrega una sombra rosada cuando el campo está enfocado. */
+}
+
+fieldset {
+  border: none; /* Elimina el borde predeterminado del fieldset. */
+  margin: 0; /* Elimina el margen por defecto. */
+  padding: 0; /* Elimina el padding por defecto. */
+}
+
+fieldset legend {
+  color: #ff69b4; /* Color rosado para el texto del legend. */
+  font-size: 1.2rem; /* Tamaño de fuente de 1.2rem para el legend. */
+  font-weight: 500; /* Peso de fuente medio. */
+  margin-bottom: 1.25rem; /* Un poco de espacio debajo del legend. */
+}
+
+.radio-group {
+  display: flex; /* Usamos Flexbox para los botones de radio. */
+  gap: 2rem; /* Espaciado de 2rem entre los botones de radio. */
+  flex-wrap: wrap; /* Permite que los botones de radio se envuelvan si es necesario. */
+}
+
+.radio-label {
+  align-items: center; /* Centra el contenido verticalmente en el label. */
+  cursor: pointer; /* Cambia el cursor cuando el mouse pasa sobre el label. */
+  display: flex; /* Usamos Flexbox dentro de cada label. */
+  gap: 0.75rem; /* Espaciado entre el radio y el texto. */
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #ff69b4; /* Cambia el color de los botones de radio a rosado. */
+}
+
+.radio-label span {
+  color: #333; /* Texto oscuro para el label del radio. */
+  font-size: 1.1rem; /* Tamaño de fuente de 1.1rem para los labels de radio. */
+}
+
+/* Botones */
+.return-button,
+.submit-button {
+  background-color: #ff69b4; /* Fondo rosa para ambos botones. */
+  border: none; /* Sin bordes para los botones. */
+  border-radius: 25px; /* Bordes redondeados para los botones. */
+  color: #fff; /* Texto blanco en los botones. */
+  cursor: pointer; /* Cambia el cursor cuando pasas sobre el botón. */
+  font-family: 'Poppins', sans-serif; /* Fuente sans-serif para los botones. */
+  font-size: 1.2rem; /* Tamaño de fuente de 1.2rem. */
+  font-weight: 500; /* Peso de fuente medio. */
+  margin-top: 2rem; /* Espaciado superior de 2rem. */
+  padding: 1rem 2rem; /* Espaciado interno de 1rem en vertical y 2rem en horizontal. */
+  transition: all 0.3s ease; /* Transición suave para cambios en el botón. */
+  text-align: center; /* Centra el texto dentro del botón. */
+  width: fit-content; /* El ancho del botón se ajusta al contenido. */
+}
+
+.return-button {
+  background-color: transparent; /* Fondo transparente para el botón de regreso. */
+  border: 2px solid #ff69b4; /* Borde rosado para el botón de regreso. */
+  color: #ff69b4; /* Texto rosado para el botón de regreso. */
+  display: block; /* El botón ocupa toda una línea. */
+  margin: 2.5rem auto 0; /* Márgenes para centrar el botón. */
+}
+
+.return-button:hover {
+  background-color: #ff69b4; /* Fondo rosado al pasar el mouse. */
+  color: #fff; /* Texto blanco al pasar el mouse. */
+}
+
+.submit-button {
+  background-color: #ff69b4; /* Fondo rosado para el botón de envío. */
+  width: 100%; /* El botón ocupa todo el ancho disponible. */
+}
+
+.submit-button:hover {
+  background-color: #ff1493; /* Fondo rosa más oscuro al pasar el mouse. */
+}
+
+/* Pie de Página */
+footer {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* Fondo gradiente rosado suave para el pie de página. */
+  color: #fff; /* Texto blanco para el pie de página. */
+  padding: 2rem 0; /* Espaciado superior e inferior de 2rem. */
+  text-align: center; /* Centra el texto en el pie de página. */
+  margin-top: auto; /* Empuja el pie de página hacia el fondo. */
+}
+
+.footer-content {
+  font-size: 1.1rem; /* Tamaño de fuente de 1.1rem para el texto en el pie de página. */
+  opacity: 0.9; /* Le da una ligera opacidad al texto. */
+}

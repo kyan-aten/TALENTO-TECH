@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Declara el tipo de documento como HTML y establece el idioma como español. -->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Establece la codificación de caracteres como UTF-8 para soportar caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el sitio sea responsive, ajustando el ancho de la página al dispositivo. -->
+    <title>Glamour Cosmetics</title> <!-- Título de la página que aparecerá en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo de estilos CSS. -->
+</head>
+
+<body>
+    <header>
+        <div class="header-content"> <!-- Contenedor principal para el contenido del encabezado. -->
+            <h1>Glamour Cosmetics</h1> <!-- Título principal de la página. -->
+            <p class="header-subtitle">Descubre tu belleza interior</p>
+            <!-- Subtítulo del encabezado, invitando a descubrir la belleza. -->
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección principal, inicialmente visible con id 'inicio'. -->
+        <section id="inicio" class="contenedor visible">
+            <div class="menu-grid"> <!-- Grid de botones de navegación. -->
+                <!-- Botón para cada sección, con su respectivo texto y función al hacer clic. -->
+                <button class="menu-button" onclick="mostrarSeccion('sesion1')">
+                    <span class="button-title">Nuestros Productos</span>
+                    <span class="button-subtitle">Descubre la Magia del Maquillaje</span>
+                </button>
+                <button class="menu-button" onclick="mostrarSeccion('sesion2')">
+                    <span class="button-title">Ingredientes Estrella</span>
+                    <span class="button-subtitle">La Ciencia detrás de la Belleza</span>
+                </button>
+                <button class="menu-button" onclick="mostrarSeccion('sesion3')">
+                    <span class="button-title">Guía de Aplicación</span>
+                    <span class="button-subtitle">Técnicas Profesionales</span>
+                </button>
+                <button class="menu-button" onclick="mostrarSeccion('sesion4')">
+                    <span class="button-title">Tu Opinión Importa</span>
+                    <span class="button-subtitle">Comparte tu Experiencia</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sección de productos estrella, oculta inicialmente. -->
+        <section id="sesion1" class="contenedor">
+            <div class="section-content">
+                <h2>Nuestros Productos Estrella</h2> <!-- Título de la sección de productos. -->
+                <!-- Lista de productos con descripción de cada uno. -->
+                <ol class="elegant-list">
+                    <li>
+                        <h3>Base de Maquillaje Luminosa</h3>
+                        <p>Fórmula ligera que se adapta a tu tono de piel para un acabado natural y radiante.</p>
+                    </li>
+                    <li>
+                        <h3>Paleta de Sombras Multitono</h3>
+                        <p>15 tonos versátiles para crear looks desde lo más natural hasta lo más atrevido.</p>
+                    </li>
+                    <li>
+                        <h3>Labial de Larga Duración</h3>
+                        <p>Color intenso y duradero que hidrata tus labios durante todo el día.</p>
+                    </li>
+                    <li>
+                        <h3>Máscara de Pestañas Voluminizadora</h3>
+                        <p>Fórmula que alarga y da volumen sin grumos ni manchas.</p>
+                    </li>
+                    <li>
+                        <h3>Iluminador en Polvo</h3>
+                        <p>Resalta tus mejores rasgos con un brillo sutil y elegante.</p>
+                    </li>
+                    <li>
+                        <h3>Set de Brochas Profesionales</h3>
+                        <p>Herramientas de alta calidad para una aplicación perfecta.</p>
+                    </li>
+                    <li>
+                        <h3>Fijador de Maquillaje</h3>
+                        <p>Spray ligero que mantiene tu maquillaje intacto por horas.</p>
+                    </li>
+                </ol>
+                <button class="return-button" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                <!-- Botón para regresar al menú inicial. -->
+            </div>
+        </section>
+
+        <!-- Sección de ingredientes estrella, oculta inicialmente. -->
+        <section id="sesion2" class="contenedor">
+            <div class="section-content">
+                <h2>Ingredientes Estrella</h2> <!-- Título de la sección de ingredientes. -->
+                <!-- Lista de ingredientes con sus descripciones. -->
+                <ul class="ingredients-list">
+                    <li>
+                        <h3>Ácido Hialurónico</h3>
+                        <p>Hidratante potente que ayuda a mantener la piel suave y flexible.</p>
+                    </li>
+                    <li>
+                        <h3>Vitamina C</h3>
+                        <p>Antioxidante que ilumina la piel y ayuda a combatir los signos del envejecimiento.</p>
+                    </li>
+                    <li>
+                        <h3>Péptidos</h3>
+                        <p>Estimulan la producción de colágeno para una piel más firme y juvenil.</p>
+                    </li>
+                    <li>
+                        <h3>Aceites Naturales</h3>
+                        <p>Nutren y suavizan la piel, aportando un brillo saludable.</p>
+                    </li>
+                    <li>
+                        <h3>Pigmentos Minerales</h3>
+                        <p>Ofrecen colores vibrantes y duraderos sin irritar la piel.</p>
+                    </li>
+                </ul>
+                <button class="return-button" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+            </div>
+        </section>
+
+        <!-- Sección de guía de aplicación, oculta inicialmente. -->
+        <section id="sesion3" class="contenedor">
+            <div class="section-content">
+                <h2>Guía de Aplicación de Maquillaje</h2> <!-- Título de la sección de la guía de aplicación. -->
+                <div class="table-container"> <!-- Contenedor para la tabla de aplicaciones. -->
+                    <table class="elegant-table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Herramienta</th>
+                                <th>Técnica</th>
+                                <th>Consejo Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filas de la tabla con los productos y consejos para cada uno. -->
+                            <tr>
+                                <td>Base</td>
+                                <td>Esponja o brocha</td>
+                                <td>Aplicar desde el centro hacia afuera</td>
+                                <td>Mezclar bien en el cuello para un acabado natural</td>
+                            </tr>
+                            <tr>
+                                <td>Corrector</td>
+                                <td>Pincel pequeño</td>
+                                <td>Toques suaves bajo los ojos</td>
+                                <td>Usar tono más claro que la base</td>
+                            </tr>
+                            <tr>
+                                <td>Sombra de ojos</td>
+                                <td>Brochas de diferentes tamaños</td>
+                                <td>Aplicar del tono más claro al más oscuro</td>
+                                <td>Difuminar bien los bordes para un look profesional</td>
+                            </tr>
+                            <tr>
+                                <td>Labial</td>
+                                <td>Aplicador o pincel de labios</td>
+                                <td>Comenzar desde el centro hacia las comisuras</td>
+                                <td>Usar lápiz de labios para definir y evitar que se corra</td>
+                            </tr>
+                            <tr>
+                                <td>Rubor</td>
+                                <td>Brocha grande y suave</td>
+                                <td>Sonreír y aplicar en las manzanas de las mejillas</td>
+                                <td>Menos es más: construir el color gradualmente</td>
+                            </tr>
+                            <tr>
+                                <td>Iluminador</td>
+                                <td>Pincel en abanico</td>
+                                <td>Aplicar en puntos altos del rostro</td>
+                                <td>Mezclar bien para un brillo natural, no artificial</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="return-button" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                <!-- Botón para regresar al menú inicial. -->
+            </div>
+        </section>
+
+        <!-- Sección para que el usuario comparta su experiencia, oculta inicialmente. -->
+        <section id="sesion4" class="contenedor">
+            <div class="section-content">
+                <h2>Comparte tu Experiencia</h2> <!-- Título de la sección de compartir experiencia. -->
+                <form class="elegant-form"> <!-- Formulario para que el usuario ingrese sus datos y comentarios. -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input id="email" name="email" type="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>¿Qué tipo de maquillaje prefieres?</legend>
+                        <!-- Pregunta para saber el tipo de maquillaje preferido. -->
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input name="preferencia" type="radio" value="natural">
+                                <span>Natural</span>
+                            </label>
+                            <label class="radio-label">
+                                <input name="preferencia" type="radio" value="glamuroso">
+                                <span>Glamuroso</span>
+                            </label>
+                            <label class="radio-label">
+                                <input name="preferencia" type="radio" value="creativo">
+                                <span>Creativo</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="producto">Producto favorito</label>
+                        <select id="producto" name="producto"> <!-- Desplegable para elegir el producto favorito. -->
+                            <option value="">Selecciona un producto</option>
+                            <option value="base">Base de maquillaje</option>
+                            <option value="labial">Labial</option>
+                            <option value="sombras">Paleta de sombras</option>
+                            <option value="mascara">Máscara de pestañas</option>
+                            <option value="iluminador">Iluminador</option>
+                            <option value="rubor">Rubor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario">Tu experiencia con nuestros productos</label>
+                        <textarea id="comentario" name="comentario" rows="4"
+                            placeholder="Cuéntanos sobre tu experiencia..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Enviar</button>
+                    <!-- Botón para enviar el formulario. -->
+                </form>
+                <button class="return-button" onclick="mostrarSeccion('inicio')">Volver al Menú</button>
+                <!-- Botón para regresar al menú inicial. -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página con derechos reservados. -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Glamour Cosmetics • Todos los Derechos Reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript para mostrar y ocultar secciones al hacer clic en los botones. -->
+    <script>
+        function mostrarSeccion(seccionId) {
+            document.querySelectorAll('.contenedor').forEach((seccion) => {
+                seccion.classList.remove('visible'); <!-- Elimina la clase visible de todas las secciones. -->
+            });
+            document.getElementById(seccionId).classList.add('visible');
+        } 
+    </script>
+    < !--Añade la clase visible a la sección seleccionada. -->
+</body>
+
+</html>
